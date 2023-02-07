@@ -91,67 +91,288 @@
       <div class="container">
         <img src="assets/img/portfolio/bellabeat1.png" class="img-fluid" alt="">
         <div class="row gy-4">
-          <h1>About</h1>
-          <h1>Ask</h1>
-          <h1>Prepare</h1>
-          <h1>Process</h1>
-          <h1>Analyze</h1>
-          <h1>Share</h1>
-          <div class="col-lg-4 col-md-6 ">
-            <img src="assets/img/case_study/Daily Activity Usage-2.png" class="img-fluid" alt="">
+          <div>
+            <h1>About</h1>
+            <p>
+              Bellabeat is a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. 
+            </p>
+            <p>
+              Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. I have been asked to focus on one of Bellabeat's products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights I discover will then help guide marketing strategy for the company. My analysis will be presented to the Bellabeat executive team along with my high-level recommendations for Bellabeat's marketing strategy.
+            </p> 
+      
           </div>
           <div>
-            <img src="assets/img/case_study/Steps by Day of Week.png" class="img-fluid" alt="">
+            <h1>Ask</h1>
+            <p>
+              Sršen knows that an analysis of Bellabeat's available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to focus on a Bellabeat product and analyze smart device usage data in order to gain insight into how people are already using their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat marketing strategy. 
+            </p>
+            <p>
+              Sršen asks you to analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices. She then wants you to select one Bellabeat product to apply these insights to in your presentation. 
+            </p> 
+            <p>
+              <strong>
+                Questions to guide my analysis
+              </strong>
+            </p>
+            <ul>
+              <li>What are some trends in smart device usage?</li>
+              <li> How could these trends apply to Bellabeat customers?</li>
+              <li>How could these trends help influence Bellabeat marketing strategy?</li>
+            </ul>
+              <p>
+                <strong>
+                  A clear summary of the business task
+                </strong>
+              </p>
+              <ul>
+                <li>analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices</li>
+                <li>How can analysis of user data from other smart device users give insight to how people are using their smart devices</li>
+                <li>How can this analysis help Bellabeat unlock new growth opportunities for the company</li>
+                <li>How the analytic trends can assist the marketing strategy for the company</li>
+              </ul>
           </div>
           <div>
-            <img src="assets/img/case_study/Calories Burnt By Day.png" class="img-fluid" alt="">
+            <h1>Prepare</h1>
+            <p>A description of all data sources used
+              The data is from a Kaggke dataset made available by Mobius. The dataset, Fitbit Fitness  
+              Tracker Data, is under CCO: Public Domain licensing therefore there is no copyright issues. The dataset contains the personal fitness tracker data from thirty fitbit users and track physical activity, heart rate, and sleep monitoring. It includes information about daily activity, steps, calories burnt and heart rate data. The dataset was generated form a distributed survey via Amazon Mechanical Turk and contains 18 csv files in long format tracking fitbit data from 03/12/2016 - 05/12/2016.</p>
+              <p>
+                Of the 18 csv files I have decided to focus for analysis on 8 of the datasets. 
+                  dailyActivty_merged.csv
+                  dailyIntensities_merged.csv
+                  dailySleep_merged.csv
+                  dailySteps_merged.csv
+                  dailyCalories_merged.csv
+                  hourlyCalories_merged.csv
+                  hourlySteps_merged.csv
+                  hourlyIntensities_merged.csv
+              </p>
           </div>
           <div>
-            <img src="assets/img/case_study/Steps by Time of Day.png" class="img-fluid" alt="">
+            <h1>Process</h1>
+            <p>here is the process</p>
           </div>
           <div>
-            <img src="assets/img/case_study/Calories Burnt by Time of Day.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Activity on Weekdays.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Activity on Weekends.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Lightly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Fairly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Very Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Steps vs Calories.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Steps vs Sleep.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Calories vs Sleep.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Sheet_15.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Sheet_16.png" class="img-fluid" alt="">
-          </div>
-          <div>
-            <img src="assets/img/case_study/Sheet_17.png" class="img-fluid" alt="">
+            <h1>Analyze</h1>
+            <p>Documentation of any cleaning or manipulation of data
+              conditional formatting for duplicates
+              date, number, time, character formatting
+              check for null values - is blank
+              check data for consistencies (#of respondents) 
+              
+              dailyActivty_merged.csv - 33 respondents 
+              dailyIntensities_merged.csv - 33 respondents
+              dailySleep_merged.csv - 24 respondents
+              dailySteps_merged.csv - 33 respondents
+              dailyCalories_merged.csv - 33 respondents
+              hourlyCalories_merged.csv - 33 respondents
+              hourlySteps_merged.csv - 33 respondents
+              hourlyIntensities_merged.csv - 33 respondents
+              
+              imported in big query for further analysis 
+              
+              renamed datasets;
+              dailyActivty_merged.csv - daily_activity
+              dailyIntensities_merged.csv - daily_intensities
+              dailySleep_merged.csv - daily_sleep
+              dailySteps_merged.csv - daily_steps
+              dailyCalories_merged.csv - daily_calories
+              hourlyCalories_merged.csv - hourly_calories
+              hourlySteps_merged.csv - hourly_steps
+              hourlyIntensities_merged.csv - hourly_intensities
+              
+              I ran the following queries in big data 
+              Verified count of each datasets
+              devide usage by intensities 
+              sum and average activity (intensity min), steps, calories by day of week
+              sum and average activity (intensity min), steps, calories by time of day 
+              intensities vs calories burnt 
+              steps vs calories burnt 
+              sleep; time asleep vs time in bed; average time to fall asleep. 
+              intensities vs sleep (time asleep and time to fall asleep)
+              calories vs sleep (time asleep and time to fall asleep)</p>
           </div>
 
+          <div class="container">
+            <h1>Share</h1>
+            <p>
+              Guiding questions 
+                  Were you able to answer the business questions? 
+                  What story does your data tell? 
+                  How do your findings relate to your original question? 
+                  Who is your audience? What is the best way to communicate with them? 
+                  Can data visualization help you share your findings? 
+                  Is your presentation accessible to your audience?
 
-          <h1>Act</h1>
-    
+                  Key tasks 
+                  Determine the best way to share your findings. 
+                  Create effective data visualizations. 
+                  Present your findings. 
+                  Ensure your work is accessible.
 
+                  Deliverable 
+                  Supporting visualizations and key findings
+            </p>
+
+            <div style="margin-top: 15px;" class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4 style="color: blue;"><strong><em><u>Here is the user activity</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Daily Activity Usage-2.png" class="img-fluid float-end" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 15px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>here is the steps by day and here is the calories burnt by day</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Steps by Day of Week.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Calories Burnt By Day.png" style="margin-top: 10px;" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 15px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>here is het steps by time of day and here are the calories burnt by time of day</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Steps by Time of Day.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Calories Burnt by Time of Day.png" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-top: 60px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>activity on the weekdays and activity on the weekends</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Activity on Weekdays.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Activity on Weekends.png" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-top: 60px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>lightly active minutes vs calories burnt and fairly active vs cal burnt and very active vs cal burnt</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Lightly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Fairly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-12 text-center">
+                  <div>
+                    <img src="assets/img/case_study/Very Active Minutes vs Calories Burnt.png" class="img-fluid" style="height: 400px;" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 60px;" class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4 style="color: blue;"><strong><em><u>steps vs calories burnt</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Steps vs Calories.png" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-top: 60px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>steps vs sleep and cal vs sleep</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Steps vs Sleep.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Calories vs Sleep.png" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-top: 60px;" class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>lightly active vs sleep and fairly active vs sleep and very active vs sleep</u></em></strong></h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Sheet_15.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Sheet_16.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-12 text-center">
+                  <div>
+                    <img src="assets/img/case_study/Sheet_17.png" class="img-fluid" style="height: 400px;" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1>Act</h1>
+            <p>Act 
+              Now that you have finished creating your visualizations, act on your findings. Prepare the deliverables you have been asked to create, including the high-level recommendations based on your analysis. Use the following Case Study Roadmap as a guide: 
+              
+              Case Study Roadmap - Act
+              
+              Guiding questions 
+              What is your final conclusion based on your analysis?
+              How could your team and business apply your insights? 
+              What next steps would you or your stakeholders take based on your findings? 
+              Is there additional data you could use to expand on your findings?
+              
+              Key tasks 
+              Create your portfolio. 
+              Add your case study. 
+              Practice presenting your case study to a friend or family member.
+              
+              Deliverable 
+              Your top high-level insights based on your analysis
+              </p>
+          </div>
         </div>
-
       </div>
     </section><!-- End Portfolio Details Section -->
 
