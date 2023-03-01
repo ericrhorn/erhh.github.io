@@ -151,7 +151,7 @@
           </div>
           <div>
             <h2><u>Prepare</u></h2>
-            <p><strong>A description of all data sources used </strong></p>
+            <h4>A description of all data sources used</h4>
             <p>
               The data is from a Kaggke dataset made available by Mobius. The dataset, Fitbit Fitness  
               Tracker Data, is under CCO: Public Domain licensing therefore there is no copyright issues. 
@@ -175,13 +175,8 @@
           </div>
           <div>
             <h2><u>Process</u></h2>
-            <p>Documentation of any cleaning or manipulation of data
-              conditional formatting for duplicates
-              date, number, time, character formatting
-              check for null values - is blank
-            </p>
-            <p>I opened the datasets in Microsoft Excel to process the data</p>
-
+            <p></p>
+            <h4>I opened the datasets in Microsoft Excel to process the data</h4>
             <p><strong>I checked data for consistencies (number of respondents)</strong></p>
             <ul>
               <li>dailyActivty_merged.csv - 33 respondents</li>
@@ -194,8 +189,13 @@
               <li>hourlyIntensities_merged.csv - 33 respondents</li>
             </ul>
             <p>I found the number of respondents were inconsistant with the 30 I was expecting based on the description of the original survey. 7 of the datasets I am using for analysis had 33 unique id's and one dataset had 24 unique id's</p>
-              
-            <p><strong>I imported the datasets in BigQuery for further analysis. I renamed the datasets during the impoort</strong></p> 
+            <p><strong>I used conditional formatting to search for dulicates</strong></p>
+              <ul>
+                <li>daily_sleep.csv - 3 duplicates</li>
+              </ul>
+            <p>I deleted the duplicates and saved the dataset</p>
+            <p><strong>I re-formatted all the ActivityData columns as some were formatted wrong. I seperated the time into a seperate column from ActivityDate and changed the time to a 24 hour time notation and removed the am/pm notation</strong></p>
+            <p><strong>Once the datasets were clean, I imported the datasets in BigQuery for further analysis and renamed the datasets during the impoort</strong></p> 
             <ul>
               <li>dailyActivty_merged.csv - daily_activity</li>
               <li>dailyIntensities_merged.csv - daily_intensities</li>
@@ -206,33 +206,26 @@
               <li>hourlySteps_merged.csv - hourly_steps</li>
               <li>hourlyIntensities_merged.csv - hourly_intensities</li>
             </ul>
-              
-              
-              
-              
-              
-              
-              
-              
           </div>
           <div>
             <h2><u>Analyze</u></h2>
-            <p>
-              I ran the following queries in big data 
-              Verified count of each datasets
-              devide usage by intensities 
-              sum and average activity (intensity min), steps, calories by day of week
-              sum and average activity (intensity min), steps, calories by time of day 
-              intensities vs calories burnt 
-              steps vs calories burnt 
-              sleep; time asleep vs time in bed; average time to fall asleep. 
-              intensities vs sleep (time asleep and time to fall asleep)
-              calories vs sleep (time asleep and time to fall asleep)</p>
+            <h4>I imported the datasets into Googles Big Query</h4>
+            <p><strong>I ran the following queries in Big Query. The queries can be found on <a href="https://github.com/ericrhorn/bellabeat_case_study">Github.</a></strong></p> 
+              <ul>
+                <li>Verified count of each datasets</li>
+                <li>Compaired usage by intensities </li>
+                <li>Compaired the sum and average activity (intensity min), steps, calories by day of week</li>
+                <li>Compaired the sum and average activity (intensity min), steps, calories by time of day</li>
+                <li>Compaired intensities vs calories burnt</li>
+                <li>Compaired steps vs calories burnt </li>
+                <li>Compaired sleep, time asleep vs time in bed, average time to fall asleep</li>
+                <li>Compaired intensities vs sleep (time asleep and time to fall asleep)</li>
+                <li>Compaired calories vs sleep (time asleep and time to fall asleep)</li>
+              </ul>
           </div>
-
           <div class="container">
             <h2><u>Share</u></h2>
-            <p>
+            <!-- <p>
               Guiding questions 
                   Were you able to answer the business questions? 
                   What story does your data tell? 
@@ -249,33 +242,43 @@
 
                   Deliverable 
                   Supporting visualizations and key findings
-            </p>
+            </p> -->
 
             <div style="margin-top: 15px;" class="container">
               <div class="row">
-                <div class="col-lg-6">
-                  <h4 style="color: blue;"><strong><em><u>Here is the user activity</u></em></strong></h4>
+                <div class="col-lg-12">
+                  <h4 style="color: blue;"><strong><em><u>User Activity</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    A comparison of the user Id's and activity shows that sedentary minutes make up most of the device activity by users at around of 80% of activity. In removing sedentary minutes you can get a better view activity by users. A large percent of activity is lightly active minutes. Very active minutes and faily active minutes make up around 15% of the activity minutes. 
+                  </p>
+                  <p>
+                    I believe this would be a consistant representation of those who wear their device while sleeping and have jobs where they may do a lot of sitting throughout the day. The lower activity minutes, sedentary and lightly active minutes, could represent in bed or sitting minutes where the higher activity level minutes could represent walking or mild to hight levels of exercise. 
+                  </p>
                 </div>
-                <div class="col-lg-6">
-                  <img src="assets/img/case_study/Daily Activity Usage-2.png" class="img-fluid float-end" alt="">
-                </div>
+                <!-- <div class="col-lg-12"> -->
+                  <div class="col-lg-6">
+                    <img src="assets/img/case_study/Daily Activity Usage-3.png" class="img-fluid float-end" alt="" style="height: 500px;">
+                  </div>
+                  <div class="col-lg-6">
+                    <img src="assets/img/case_study/Daily Activity Usage-4.png" class="img-fluid float-end" alt="" style="height: 500px;">
+                  </div>
+                <!-- </div> -->
               </div>
             </div>
 
             <div style="margin-top: 15px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>here is the steps by day and here is the calories burnt by day</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Steps by Day of Week and Calories Burnt by Day of Week</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    Looking at the tables, steps by day of week and the calories burnt by day of week, there is a visable correlation between the amount of steps per day and the amount of calories burnt per day. It is clear by looking at both tables, Tuesday, Wednesday, and Thursday have higher steps and calories burnt than other days of the week. It is also clear that Sundays have the lowest steps and calories burnt. 
+                  </p>
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Steps by Day of Week.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6">
-                  <img src="assets/img/case_study/Calories Burnt By Day.png" style="margin-top: 10px;" class="img-fluid" alt="">
+                  <img src="assets/img/case_study/Calories Burnt By Day.png" style="margin-top: 25px;" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
@@ -283,9 +286,16 @@
             <div style="margin-top: 15px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>here is het steps by time of day and here are the calories burnt by time of day</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Steps by Time of Day and Calories Burnt by Time of Day</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    As we view steps by time of day we can see the same correlation as we did when viewing steps by day of week and calories burnt by day of week. As steps go up during the day so do calories burnt. 
+                  </p>
+                  <p>
+                    Steps start to increse around 6:00am and 7:00am and remain high until they trend down around 8:00pm. The highest steps are during the day is between 5:00pm and 7:00pm. This could represent after work activities such as sports, a visit to the gym, or playing with the family.   
+                  </p>
+                  <p>
+                    Calories burn thorughout the day, however you can see an increase in calories burnt around 5:00am and 6:00am and they remain high through the day until they trend down around 8:00pm. Calories burnt is at its peak between 5:00pm and 7:00pm which is also consistant with the peak steps around the same time 
+                  </p>
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Steps by Time of Day.png" class="img-fluid" alt="">
@@ -300,9 +310,10 @@
             <div style="margin-top: 60px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>activity on the weekdays and activity on the weekends</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Activity on Weekdays and Activity on Weekends</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    Its apparent here that lightly active minutes make up the majority of activity minutes 7 days a week. The weekends also have lower activity minutes when compaired to the activity minutes during the week. Monday - Thursday have higher activity levels when compaired to the other days of the week. 
+                  </p>
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Activity on Weekdays.png" class="img-fluid" alt="">
@@ -317,19 +328,23 @@
             <div style="margin-top: 60px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>lightly active minutes vs calories burnt and fairly active vs cal burnt and very active vs cal burnt</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Lightly Active Minutes, Fairly Active Minutes, and Very Active Minutes vs Calories Burnt</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    When compairing lightly active minutes, fairly active minutes, and very active minutes to calories burnt you can see a positive upward trend as the activity increases. This trend shows that the higher the activity level the more calories are burnt. 
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Sedentary Min vs Cal Burnt (2).png" class="img-fluid" alt="" style="height: 470px;">
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Lightly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6">
-                  <img src="assets/img/case_study/Fairly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="">
+                  <img src="assets/img/case_study/Fairly Active Minutes vs Calories Burnt.png" class="img-fluid" alt="" style="width: 580px;">
                 </div>
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
                   <div>
-                    <img src="assets/img/case_study/Very Active Minutes vs Calories Burnt.png" class="img-fluid" style="height: 400px;" alt="">
+                    <img src="assets/img/case_study/Very Active Minutes vs Calories Burnt.png" class="img-fluid" style="height: 435px; width: 800px;" alt="">
                   </div>
                 </div>
               </div>
@@ -338,9 +353,10 @@
             <div style="margin-top: 60px;" class="container">
               <div class="row">
                 <div class="col-lg-6">
-                  <h4 style="color: blue;"><strong><em><u>steps vs calories burnt</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Steps vs Calories Burnt</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    Much like compairing activity level to calories burnt, steps vs calories burnt has a positive correlation. The amount of steps taken reflects the amount of calories burnt. As steps increase so do caloreis burnt. 
+                  </p>
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Steps vs Calories.png" class="img-fluid" alt="">
@@ -352,9 +368,13 @@
             <div style="margin-top: 60px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>steps vs sleep and cal vs sleep</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Steps vs Sleep and Calories vs Sleep</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    We have already seen thorugh the previous visuals that activity levels and steps has a direct correlation to the amount of calories burnt. Here we can see the affect total steps and calories burnt has on sleep. 
+                  </p>
+                  <p>
+                    We can see that the higher the steps and higher the calories burnt (which we know already has a relational trend) has a direct effect on time to fall asleep. Those users who have a higher step total, burn more calories, and fall asleep faster. There does not appear to be a correlation between total steps and calories burt and total minutes asleep. The total minutes asleep appear to be consistant between 300 and 550 minutes (5-9 hours) regardless of total steps and calories burnt. 
+                  </p>
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Steps vs Sleep.png" class="img-fluid" alt="">
@@ -369,19 +389,23 @@
             <div style="margin-top: 60px;" class="container">
               <div class="row">
                 <div class="col-lg-12">
-                  <h4 style="color: blue;"><strong><em><u>lightly active vs sleep and fairly active vs sleep and very active vs sleep</u></em></strong></h4>
+                  <h4 style="color: blue;"><strong><em><u>Lightly Active Minutes, Fairly Active Minutes, and Very Active Minutes vs sleep</u></em></strong></h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elementum tortor. Duis volutpat nisl sed consequat imperdiet. Proin enim velit, aliquam sagittis elementum quis, consequat varius velit. Nulla efficitur tempor erat, eu consequat velit ultrices sit amet. Phasellus et ullamcorper sapien, vel porta eros. Curabitur semper enim libero, et sodales urna scelerisque sed. Fusce vitae elit enim. In hac habitasse platea dictumst. Maecenas lorem nunc, dapibus at faucibus eget, finibus at nisi. Sed viverra vitae metus ac dignissim. Nam iaculis eros et lacinia commodo.</p>
+                    All three activity levels has very similar effects on how fast it takes to fall asleep and how much time a user is asleep. Fairly active minutes deviates from the other two and has a higher concentration of users who take longer to fall asleep and a higher concentration of users who get less sleep.  
+                  </p>
                 </div>
                 <div class="col-lg-6">
-                  <img src="assets/img/case_study/Sheet_15.png" class="img-fluid" alt="">
+                  <img src="assets/img/case_study/sedminvssleep.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/img/case_study/Sheet_15.png" class="img-fluid" style="height: 510px;" alt="">
                 </div>
                 <div class="col-lg-6">
                   <img src="assets/img/case_study/Sheet_16.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
                   <div>
-                    <img src="assets/img/case_study/Sheet_17.png" class="img-fluid" style="height: 400px;" alt="">
+                    <img src="assets/img/case_study/Sheet_17.png" class="img-fluid" style="height: 470px;" alt="">
                   </div>
                 </div>
               </div>
